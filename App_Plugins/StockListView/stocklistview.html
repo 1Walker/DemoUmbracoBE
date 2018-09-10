@@ -1,0 +1,31 @@
+﻿<div ng-controller="StockListView.Controller" class="productLayout">
+    <h2>
+        Products
+    </h2>
+
+    <p>
+        Below is a custom list view demonstrating the ability to integrate third party systems within an Umbraco installation. The products are currently pulled from a surface controller
+        returning dummy data, though would be best suited to external API endpoints (such as a stock or financial management systems).
+    </p>
+
+    <p>
+        The potential for a list editor is huge, as you can create a completely bespoke management system within Umbraco that can be pushed over to a different system. 
+    </p>
+
+    <div class="listViewItemHold" ng-repeat="stockItem in stock">
+        <div class="listViewItem">
+            <h3>
+                {{stockItem.Name}}
+            </h3>
+            <p>
+                {{stockItem.Description}}
+            </p>
+            <p>
+                <img src="{{stockItem.ImageSrc}}" alt="{{stockItem.name}}" />
+            </p>
+
+            <a href="{{stockItem.ExternalUrl}}" class="viewProduct">View Product</a>
+        </div>
+    </div>
+
+</div>

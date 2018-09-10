@@ -1,0 +1,27 @@
+﻿<style>
+    .success {
+        color: green;
+    }
+
+    .failure {
+        color: red;
+    }
+
+    p {
+        opacity: 0;
+        transition: opacity .25s;
+    }
+
+    .visible{
+        opacity: 1 !important
+    }
+</style>
+
+<form ng-controller="utilities.WebsiteChecker" ng-submit="checkStatus()">
+    <div>
+        <input type="text" ng-model="searchUrl" />
+        <input type="submit" value="Check" style="height: 32px;" />
+    </div>
+    
+    <p class="{{output.type}} {{output.class}}">{{output.message}}</p>
+</form>

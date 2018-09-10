@@ -1,0 +1,15 @@
+﻿{
+  "propertyEditors": [
+    {
+      "alias": "Website.StatusChecker",
+      "name": "Website Status Chekcer",
+      "group": "Utilities",
+      "editor": {
+        "view": "~/App_Plugins/WebsiteStatusChecker/statuschecker.html",
+      }
+    }
+  ],
+    "javascript": [
+        "~/App_Plugins/WebsiteStatusChecker/statuschecker.controller.js"
+    ]
+}
